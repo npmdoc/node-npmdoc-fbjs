@@ -1,0 +1,5262 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/facebook/fbjs#readme">fbjs (v0.8.12)</a>
+</h1>
+<h4>A collection of utility libraries used by other Facebook JS projects</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs">module fbjs</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer">
+            function <span class="apidocSignatureSpan">fbjs.</span>DataTransfer
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred">
+            function <span class="apidocSignatureSpan">fbjs.</span>Deferred
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise">
+            function <span class="apidocSignatureSpan">fbjs.</span>Promise
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PromiseMap">
+            function <span class="apidocSignatureSpan">fbjs.</span>PromiseMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native">
+            function <span class="apidocSignatureSpan">fbjs.</span>Promise_native
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.URI">
+            function <span class="apidocSignatureSpan">fbjs.</span>URI
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiService">
+            function <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiService
+            <span class="apidocSignatureSpan">(defaultDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction">
+            function <span class="apidocSignatureSpan">fbjs.</span>emptyFunction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate">
+            function <span class="apidocSignatureSpan">fbjs.</span>enumerate
+            <span class="apidocSignatureSpan">(object, kind)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.getViewportDimensions">
+            function <span class="apidocSignatureSpan">fbjs.</span>getViewportDimensions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>CSSCore</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>DataTransfer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>Deferred.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>ErrorUtils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>EventListener</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>PhotosMimeType</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>Promise.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>PromiseMap.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>Promise_native.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>Scroll</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>Style</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>TokenizeUtil</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>TouchEventUtils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>URI.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidi</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiDirection</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiService.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeCJK</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeHangulKorean</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeUtils</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UnicodeUtilsExtra</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>UserAgent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.</span>VersionRange</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.CSSCore">module fbjs.CSSCore</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.CSSCore.addClass">
+            function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>addClass
+            <span class="apidocSignatureSpan">(element, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.CSSCore.conditionClass">
+            function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>conditionClass
+            <span class="apidocSignatureSpan">(element, className, bool)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.CSSCore.hasClass">
+            function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>hasClass
+            <span class="apidocSignatureSpan">(element, className)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.CSSCore.matchesSelector">
+            function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>matchesSelector
+            <span class="apidocSignatureSpan">(element, selector)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.CSSCore.removeClass">
+            function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>removeClass
+            <span class="apidocSignatureSpan">(element, className)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.DataTransfer">module fbjs.DataTransfer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.DataTransfer">
+            function <span class="apidocSignatureSpan">fbjs.</span>DataTransfer
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.DataTransfer.prototype">module fbjs.DataTransfer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.getCount">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getCount
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.getFiles">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.getHTML">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getHTML
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.getLink">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.getText">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getText
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.hasFiles">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>hasFiles
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.isImage">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isImage
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.isLink">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isLink
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.DataTransfer.prototype.isRichText">
+            function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isRichText
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Deferred">module fbjs.Deferred</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.Deferred">
+            function <span class="apidocSignatureSpan">fbjs.</span>Deferred
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Deferred.prototype">module fbjs.Deferred.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.catch">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>catch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.done">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>done
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.getPromise">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>getPromise
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.isSettled">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>isSettled
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.reject">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>reject
+            <span class="apidocSignatureSpan">(reason)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.resolve">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Deferred.prototype.then">
+            function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>then
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.ErrorUtils">module fbjs.ErrorUtils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.ErrorUtils.applyWithGuard">
+            function <span class="apidocSignatureSpan">fbjs.ErrorUtils.</span>applyWithGuard
+            <span class="apidocSignatureSpan">(callback, context, args, onError, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.ErrorUtils.guard">
+            function <span class="apidocSignatureSpan">fbjs.ErrorUtils.</span>guard
+            <span class="apidocSignatureSpan">(callback, name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.EventListener">module fbjs.EventListener</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.EventListener.capture">
+            function <span class="apidocSignatureSpan">fbjs.EventListener.</span>capture
+            <span class="apidocSignatureSpan">(target, eventType, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.EventListener.listen">
+            function <span class="apidocSignatureSpan">fbjs.EventListener.</span>listen
+            <span class="apidocSignatureSpan">(target, eventType, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.EventListener.registerDefault">
+            function <span class="apidocSignatureSpan">fbjs.EventListener.</span>registerDefault
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.PhotosMimeType">module fbjs.PhotosMimeType</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PhotosMimeType.isImage">
+            function <span class="apidocSignatureSpan">fbjs.PhotosMimeType.</span>isImage
+            <span class="apidocSignatureSpan">(mimeString)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PhotosMimeType.isJpeg">
+            function <span class="apidocSignatureSpan">fbjs.PhotosMimeType.</span>isJpeg
+            <span class="apidocSignatureSpan">(mimeString)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Promise">module fbjs.Promise</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.Promise">
+            function <span class="apidocSignatureSpan">fbjs.</span>Promise
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise._61">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>_61
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.all">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>all
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.denodeify">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>denodeify
+            <span class="apidocSignatureSpan">(fn, argumentCount)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.disableSynchronous">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>disableSynchronous
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.enableSynchronous">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>enableSynchronous
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.nodeify">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>nodeify
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.race">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>race
+            <span class="apidocSignatureSpan">(values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.reject">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>reject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.resolve">
+            function <span class="apidocSignatureSpan">fbjs.Promise.</span>resolve
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.Promise.</span>_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.Promise.</span>_97</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Promise.prototype">module fbjs.Promise.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.prototype.catch">
+            function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>catch
+            <span class="apidocSignatureSpan">(onRejected)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.prototype.done">
+            function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>done
+            <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.prototype.finally">
+            function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>finally
+            <span class="apidocSignatureSpan">(f)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.prototype.nodeify">
+            function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>nodeify
+            <span class="apidocSignatureSpan">(callback, ctx)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise.prototype.then">
+            function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>then
+            <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.PromiseMap">module fbjs.PromiseMap</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PromiseMap.PromiseMap">
+            function <span class="apidocSignatureSpan">fbjs.</span>PromiseMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.PromiseMap.prototype">module fbjs.PromiseMap.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PromiseMap.prototype.get">
+            function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>get
+            <span class="apidocSignatureSpan">(key)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PromiseMap.prototype.rejectKey">
+            function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>rejectKey
+            <span class="apidocSignatureSpan">(key, reason)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.PromiseMap.prototype.resolveKey">
+            function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>resolveKey
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Promise_native">module fbjs.Promise_native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.Promise_native">
+            function <span class="apidocSignatureSpan">fbjs.</span>Promise_native
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native._61">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>_61
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.all">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>all
+            <span class="apidocSignatureSpan">(arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.race">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>race
+            <span class="apidocSignatureSpan">(values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.reject">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>reject
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.resolve">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>resolve
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.Promise_native.</span>_10</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fbjs.Promise_native.</span>_97</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Promise_native.prototype">module fbjs.Promise_native.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.prototype.catch">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>catch
+            <span class="apidocSignatureSpan">(onRejected)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.prototype.done">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>done
+            <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.prototype.finally">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>finally
+            <span class="apidocSignatureSpan">(onSettled)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Promise_native.prototype.then">
+            function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>then
+            <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Scroll">module fbjs.Scroll</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Scroll.getLeft">
+            function <span class="apidocSignatureSpan">fbjs.Scroll.</span>getLeft
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Scroll.getTop">
+            function <span class="apidocSignatureSpan">fbjs.Scroll.</span>getTop
+            <span class="apidocSignatureSpan">(element)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Scroll.setLeft">
+            function <span class="apidocSignatureSpan">fbjs.Scroll.</span>setLeft
+            <span class="apidocSignatureSpan">(element, newLeft)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Scroll.setTop">
+            function <span class="apidocSignatureSpan">fbjs.Scroll.</span>setTop
+            <span class="apidocSignatureSpan">(element, newTop)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.Style">module fbjs.Style</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Style.get">
+            function <span class="apidocSignatureSpan">fbjs.Style.</span>get
+            <span class="apidocSignatureSpan">(node, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.Style.getScrollParent">
+            function <span class="apidocSignatureSpan">fbjs.Style.</span>getScrollParent
+            <span class="apidocSignatureSpan">(node)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.TokenizeUtil">module fbjs.TokenizeUtil</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.TokenizeUtil.getPunctuation">
+            function <span class="apidocSignatureSpan">fbjs.TokenizeUtil.</span>getPunctuation
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.TouchEventUtils">module fbjs.TouchEventUtils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.TouchEventUtils.extractSingleTouch">
+            function <span class="apidocSignatureSpan">fbjs.TouchEventUtils.</span>extractSingleTouch
+            <span class="apidocSignatureSpan">(nativeEvent)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.URI">module fbjs.URI</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.URI.URI">
+            function <span class="apidocSignatureSpan">fbjs.</span>URI
+            <span class="apidocSignatureSpan">(uri)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.URI.prototype">module fbjs.URI.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.URI.prototype.toString">
+            function <span class="apidocSignatureSpan">fbjs.URI.prototype.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeBidi">module fbjs.UnicodeBidi</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.firstStrongChar">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>firstStrongChar
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.firstStrongCharDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>firstStrongCharDir
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.getDirection">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>getDirection
+            <span class="apidocSignatureSpan">(str, strongFallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.isDirectionLTR">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>isDirectionLTR
+            <span class="apidocSignatureSpan">(str, strongFallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.isDirectionRTL">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>isDirectionRTL
+            <span class="apidocSignatureSpan">(str, strongFallback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidi.resolveBlockDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>resolveBlockDir
+            <span class="apidocSignatureSpan">(str, fallback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeBidiDirection">module fbjs.UnicodeBidiDirection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.getGlobalDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getGlobalDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getHTMLDir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDirIfDifferent">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getHTMLDirIfDifferent
+            <span class="apidocSignatureSpan">(dir, otherDir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.initGlobalDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>initGlobalDir
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.isStrong">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>isStrong
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiDirection.setGlobalDir">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>setGlobalDir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>LTR</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>NEUTRAL</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>RTL</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeBidiService">module fbjs.UnicodeBidiService</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiService.UnicodeBidiService">
+            function <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiService
+            <span class="apidocSignatureSpan">(defaultDir)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeBidiService.prototype">module fbjs.UnicodeBidiService.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiService.prototype.getDirection">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiService.prototype.</span>getDirection
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeBidiService.prototype.reset">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeBidiService.prototype.</span>reset
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeCJK">module fbjs.UnicodeCJK</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.hasIdeoOrSyll">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasIdeoOrSyll
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.hasIdeograph">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasIdeograph
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.hasKana">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasKana
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.hiraganaToKatakana">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hiraganaToKatakana
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.isKanaWithTrailingLatin">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>isKanaWithTrailingLatin
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeCJK.kanaRemoveTrailingLatin">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>kanaRemoveTrailingLatin
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeHangulKorean">module fbjs.UnicodeHangulKorean</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeHangulKorean.toConjoiningJamo">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeHangulKorean.</span>toConjoiningJamo
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeUtils">module fbjs.UnicodeUtils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.getCodePoints">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>getCodePoints
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.getUTF16Length">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>getUTF16Length
+            <span class="apidocSignatureSpan">(str, pos)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.hasSurrogateUnit">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>hasSurrogateUnit
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.isCodeUnitInSurrogateRange">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>isCodeUnitInSurrogateRange
+            <span class="apidocSignatureSpan">(codeUnit)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.isSurrogatePair">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>isSurrogatePair
+            <span class="apidocSignatureSpan">(str, index)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.strlen">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>strlen
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.substr">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>substr
+            <span class="apidocSignatureSpan">(str, start, length)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtils.substring">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>substring
+            <span class="apidocSignatureSpan">(str, start, end)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UnicodeUtilsExtra">module fbjs.UnicodeUtilsExtra</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.cEscape">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>cEscape
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.formatCodePoint">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>formatCodePoint
+            <span class="apidocSignatureSpan">(codePoint)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.getCodePointsFormatted">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>getCodePointsFormatted
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.jsEscape">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>jsEscape
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.objcEscape">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>objcEscape
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.phpEscape">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>phpEscape
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.pyEscape">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>pyEscape
+            <span class="apidocSignatureSpan">(s)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UnicodeUtilsExtra.zeroPaddedHex">
+            function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>zeroPaddedHex
+            <span class="apidocSignatureSpan">(codePoint, len)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.UserAgent">module fbjs.UserAgent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isBrowser">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isBrowser
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isBrowserArchitecture">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isBrowserArchitecture
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isDevice">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isDevice
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isEngine">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isEngine
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isPlatform">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isPlatform
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.UserAgent.isPlatformArchitecture">
+            function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isPlatformArchitecture
+            <span class="apidocSignatureSpan">(string)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.VersionRange">module fbjs.VersionRange</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.VersionRange.contains">
+            function <span class="apidocSignatureSpan">fbjs.VersionRange.</span>contains
+            <span class="apidocSignatureSpan">(range, version)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.emptyFunction">module fbjs.emptyFunction</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.emptyFunction">
+            function <span class="apidocSignatureSpan">fbjs.</span>emptyFunction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturns">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturns
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturnsArgument">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsArgument
+            <span class="apidocSignatureSpan">(arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturnsFalse">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsFalse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturnsNull">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsNull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturnsThis">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsThis
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.emptyFunction.thatReturnsTrue">
+            function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsTrue
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.enumerate">module fbjs.enumerate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate.enumerate">
+            function <span class="apidocSignatureSpan">fbjs.</span>enumerate
+            <span class="apidocSignatureSpan">(object, kind)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate.entries">
+            function <span class="apidocSignatureSpan">fbjs.enumerate.</span>entries
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate.generic">
+            function <span class="apidocSignatureSpan">fbjs.enumerate.</span>generic
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate.keys">
+            function <span class="apidocSignatureSpan">fbjs.enumerate.</span>keys
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.enumerate.values">
+            function <span class="apidocSignatureSpan">fbjs.enumerate.</span>values
+            <span class="apidocSignatureSpan">(object)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.enumerate.</span>KIND_ENTRIES</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.enumerate.</span>KIND_KEYS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">fbjs.enumerate.</span>KIND_VALUES</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fbjs.getViewportDimensions">module fbjs.getViewportDimensions</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.getViewportDimensions.getViewportDimensions">
+            function <span class="apidocSignatureSpan">fbjs.</span>getViewportDimensions
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fbjs.getViewportDimensions.withoutScrollbars">
+            function <span class="apidocSignatureSpan">fbjs.getViewportDimensions.</span>withoutScrollbars
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs" id="apidoc.module.fbjs">module fbjs</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer" id="apidoc.element.fbjs.DataTransfer">
+        function <span class="apidocSignatureSpan">fbjs.</span>DataTransfer
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DataTransfer(data) {
+  _classCallCheck(this, DataTransfer);
+
+  this.data = data;
+
+  // Types could be DOMStringList or array
+  this.types = data.types ? createArrayFromMixed(data.types) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred" id="apidoc.element.fbjs.Deferred">
+        function <span class="apidocSignatureSpan">fbjs.</span>Deferred
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Deferred() {
+  var _this = this;
+
+  _classCallCheck(this, Deferred);
+
+  this._settled = false;
+  this._promise = new Promise(function (resolve, reject) {
+    _this._resolve = resolve;
+    _this._reject = reject;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise" id="apidoc.element.fbjs.Promise">
+        function <span class="apidocSignatureSpan">fbjs.</span>Promise
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fn) {
+  if (typeof this !== 'object') {
+    throw new TypeError('Promises must be constructed via new');
+  }
+  if (typeof fn !== 'function') {
+    throw new TypeError('not a function');
+  }
+  this._45 = 0;
+  this._81 = 0;
+  this._65 = null;
+  this._54 = null;
+  if (fn === noop) return;
+  doResolve(fn, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PromiseMap" id="apidoc.element.fbjs.PromiseMap">
+        function <span class="apidocSignatureSpan">fbjs.</span>PromiseMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PromiseMap() {
+  _classCallCheck(this, PromiseMap);
+
+  this._deferred = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native" id="apidoc.element.fbjs.Promise_native">
+        function <span class="apidocSignatureSpan">fbjs.</span>Promise_native
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fn) {
+  if (typeof this !== 'object') {
+    throw new TypeError('Promises must be constructed via new');
+  }
+  if (typeof fn !== 'function') {
+    throw new TypeError('not a function');
+  }
+  this._45 = 0;
+  this._81 = 0;
+  this._65 = null;
+  this._54 = null;
+  if (fn === noop) return;
+  doResolve(fn, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.URI" id="apidoc.element.fbjs.URI">
+        function <span class="apidocSignatureSpan">fbjs.</span>URI
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function URI(uri) {
+  _classCallCheck(this, URI);
+
+  this._uri = uri;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiService" id="apidoc.element.fbjs.UnicodeBidiService">
+        function <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiService
+        <span class="apidocSignatureSpan">(defaultDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UnicodeBidiService(defaultDir) {
+  _classCallCheck(this, UnicodeBidiService);
+
+  if (!defaultDir) {
+    defaultDir = UnicodeBidiDirection.getGlobalDir();
+  } else {
+    !UnicodeBidiDirection.isStrong(defaultDir) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Default direction must
+ be a strong direction (LTR or RTL)') : invariant(false) : void 0;
+  }
+  this._defaultDir = defaultDir;
+  this.reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction" id="apidoc.element.fbjs.emptyFunction">
+        function <span class="apidocSignatureSpan">fbjs.</span>emptyFunction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate" id="apidoc.element.fbjs.enumerate">
+        function <span class="apidocSignatureSpan">fbjs.</span>enumerate
+        <span class="apidocSignatureSpan">(object, kind)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enumerate(object, kind) {
+
+  // First check specific iterators.
+  if (typeof object === 'string') {
+    return StringIterators[kind || KIND_VALUES](object);
+  } else if (Array.isArray(object)) {
+    return ArrayIterators[kind || KIND_VALUES](object);
+
+    // Then see if an object implements own.
+  } else if (object[Symbol.iterator]) {
+    return object[Symbol.iterator]();
+
+    // And fallback to generic with entries.
+  } else {
+    return GenericIterators[kind || KIND_ENTRIES](object);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.getViewportDimensions" id="apidoc.element.fbjs.getViewportDimensions">
+        function <span class="apidocSignatureSpan">fbjs.</span>getViewportDimensions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getViewportDimensions() {
+  return {
+    width: window.innerWidth || getViewportWidth(),
+    height: window.innerHeight || getViewportHeight()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.CSSCore" id="apidoc.module.fbjs.CSSCore">module fbjs.CSSCore</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.CSSCore.addClass" id="apidoc.element.fbjs.CSSCore.addClass">
+        function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>addClass
+        <span class="apidocSignatureSpan">(element, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function addClass(element, className) {
+  !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only a single class
+name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
+
+  if (className) {
+    if (element.classList) {
+      element.classList.add(className);
+    } else if (!CSSCore.hasClass(element, className)) {
+      element.className = element.className + ' ' + className;
+    }
+  }
+  return element;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.CSSCore.conditionClass" id="apidoc.element.fbjs.CSSCore.conditionClass">
+        function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>conditionClass
+        <span class="apidocSignatureSpan">(element, className, bool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function conditionClass(element, className, bool) {
+  return (bool ? CSSCore.addClass : CSSCore.removeClass)(element, className);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.CSSCore.hasClass" id="apidoc.element.fbjs.CSSCore.hasClass">
+        function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>hasClass
+        <span class="apidocSignatureSpan">(element, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasClass(element, className) {
+  !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSS.hasClass takes only a single class name
+.') : invariant(false) : void 0;
+  if (element.classList) {
+    return !!className &amp;&amp; element.classList.contains(className);
+  }
+  return (' ' + element.className + ' ').indexOf(' ' + className + ' ') &gt; -1;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+addClass: function addClass(element, className) {
+  !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only
+a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
+
+  if (className) {
+    if (element.classList) {
+      element.classList.add(className);
+    } else if (!CSSCore.<span class="apidocCodeKeywordSpan">hasClass</span>(element, className)) {
+      element.className = element.className + ' ' + className;
+    }
+  }
+  return element;
+},
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.CSSCore.matchesSelector" id="apidoc.element.fbjs.CSSCore.matchesSelector">
+        function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>matchesSelector
+        <span class="apidocSignatureSpan">(element, selector)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function matchesSelector(element, selector) {
+  var matchesImpl = element.matches || element.webkitMatchesSelector || element.mozMatchesSelector || element.msMatchesSelector ||
+function (s) {
+    return matchesSelector_SLOW(element, s);
+  };
+  return matchesImpl.call(element, selector);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.CSSCore.removeClass" id="apidoc.element.fbjs.CSSCore.removeClass">
+        function <span class="apidocSignatureSpan">fbjs.CSSCore.</span>removeClass
+        <span class="apidocSignatureSpan">(element, className)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function removeClass(element, className) {
+  !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.removeClass takes only a single class
+ name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : void 0;
+
+  if (className) {
+    if (element.classList) {
+      element.classList.remove(className);
+    } else if (CSSCore.hasClass(element, className)) {
+      element.className = element.className.replace(new RegExp('(^|\\s)' + className + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ') //
+multiple spaces to one
+      .replace(/^\s*|\s*$/g, ''); // trim the ends
+    }
+  }
+  return element;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.DataTransfer" id="apidoc.module.fbjs.DataTransfer">module fbjs.DataTransfer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.DataTransfer" id="apidoc.element.fbjs.DataTransfer.DataTransfer">
+        function <span class="apidocSignatureSpan">fbjs.</span>DataTransfer
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function DataTransfer(data) {
+  _classCallCheck(this, DataTransfer);
+
+  this.data = data;
+
+  // Types could be DOMStringList or array
+  this.types = data.types ? createArrayFromMixed(data.types) : [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.DataTransfer.prototype" id="apidoc.module.fbjs.DataTransfer.prototype">module fbjs.DataTransfer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.getCount" id="apidoc.element.fbjs.DataTransfer.prototype.getCount">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getCount
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCount() {
+  if (this.data.hasOwnProperty('items')) {
+    return this.data.items.length;
+  } else if (this.data.hasOwnProperty('mozItemCount')) {
+    return this.data.mozItemCount;
+  } else if (this.data.files) {
+    return this.data.files.length;
+  }
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.getFiles" id="apidoc.element.fbjs.DataTransfer.prototype.getFiles">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFiles() {
+  if (this.data.items) {
+    // createArrayFromMixed doesn't properly handle DataTransferItemLists.
+    return Array.prototype.slice.call(this.data.items).map(getFileFromDataTransfer).filter(emptyFunction.thatReturnsArgument);
+  } else if (this.data.files) {
+    return Array.prototype.slice.call(this.data.files);
+  } else {
+    return [];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return type.indexOf('application/x-moz-file') != -1;
+});
+
+if (isImage) {
+  return true;
+}
+
+var items = this.<span class="apidocCodeKeywordSpan">getFiles</span>();
+for (var i = 0; i &lt; items.length; i++) {
+  var type = items[i].type;
+  if (!PhotosMimeType.isImage(type)) {
+    return false;
+  }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.getHTML" id="apidoc.element.fbjs.DataTransfer.prototype.getHTML">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getHTML
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getHTML() {
+  if (this.data.getData) {
+    if (!this.types.length) {
+      return this.data.getData('Text');
+    } else if (this.types.indexOf('text/html') != -1) {
+      return this.data.getData('text/html');
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+  DataTransfer.prototype.isRichText = function isRichText() {
+// If HTML is available, treat this data as rich text. This way, we avoid
+// using a pasted image if it is packaged with HTML -- this may occur with
+// pastes from MS Word, for example.  However this is only rich text if
+// there's accompanying text.
+if (this.<span class="apidocCodeKeywordSpan">getHTML</span>() &amp;&amp; this.getText()) {
+  return true;
+}
+
+// When an image is copied from a preview window, you end up with two
+// DataTransferItems one of which is a file's metadata as text.  Skip those.
+if (this.isImage()) {
+  return false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.getLink" id="apidoc.element.fbjs.DataTransfer.prototype.getLink">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getLink() {
+  if (this.data.getData) {
+    if (this.types.indexOf('text/x-moz-url') != -1) {
+      var url = this.data.getData('text/x-moz-url').split('\n');
+      return url[0];
+    }
+    return this.types.indexOf('text/uri-list') != -1 ? this.data.getData('text/uri-list') : this.data.getData('url');
+  }
+
+  return null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.getText" id="apidoc.element.fbjs.DataTransfer.prototype.getText">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>getText
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getText() {
+  var text;
+  if (this.data.getData) {
+    if (!this.types.length) {
+      text = this.data.getData('Text');
+    } else if (this.types.indexOf('text/plain') != -1) {
+      text = this.data.getData('text/plain');
+    }
+  }
+  return text ? text.replace(CR_LF_REGEX, LF_ONLY) : null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+  DataTransfer.prototype.isRichText = function isRichText() {
+// If HTML is available, treat this data as rich text. This way, we avoid
+// using a pasted image if it is packaged with HTML -- this may occur with
+// pastes from MS Word, for example.  However this is only rich text if
+// there's accompanying text.
+if (this.getHTML() &amp;&amp; this.<span class="apidocCodeKeywordSpan">getText</span>()) {
+  return true;
+}
+
+// When an image is copied from a preview window, you end up with two
+// DataTransferItems one of which is a file's metadata as text.  Skip those.
+if (this.isImage()) {
+  return false;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.hasFiles" id="apidoc.element.fbjs.DataTransfer.prototype.hasFiles">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>hasFiles
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasFiles() {
+  return this.getFiles().length &gt; 0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.isImage" id="apidoc.element.fbjs.DataTransfer.prototype.isImage">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isImage
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImage() {
+  var isImage = this.types.some(function (type) {
+    // Firefox will have a type of application/x-moz-file for images during
+    // dragging
+    return type.indexOf('application/x-moz-file') != -1;
+  });
+
+  if (isImage) {
+    return true;
+  }
+
+  var items = this.getFiles();
+  for (var i = 0; i &lt; items.length; i++) {
+    var type = items[i].type;
+    if (!PhotosMimeType.isImage(type)) {
+      return false;
+    }
+  }
+
+  return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // there's accompanying text.
+  if (this.getHTML() &amp;&amp; this.getText()) {
+    return true;
+  }
+
+  // When an image is copied from a preview window, you end up with two
+  // DataTransferItems one of which is a file's metadata as text.  Skip those.
+  if (this.<span class="apidocCodeKeywordSpan">isImage</span>()) {
+    return false;
+  }
+
+  return this.types.some(function (type) {
+    return RICH_TEXT_TYPES[type];
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.isLink" id="apidoc.element.fbjs.DataTransfer.prototype.isLink">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isLink
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isLink() {
+  return this.types.some(function (type) {
+    return type.indexOf('Url') != -1 || type.indexOf('text/uri-list') != -1 || type.indexOf('text/x-moz-url');
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.DataTransfer.prototype.isRichText" id="apidoc.element.fbjs.DataTransfer.prototype.isRichText">
+        function <span class="apidocSignatureSpan">fbjs.DataTransfer.prototype.</span>isRichText
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isRichText() {
+  // If HTML is available, treat this data as rich text. This way, we avoid
+  // using a pasted image if it is packaged with HTML -- this may occur with
+  // pastes from MS Word, for example.  However this is only rich text if
+  // there's accompanying text.
+  if (this.getHTML() &amp;&amp; this.getText()) {
+    return true;
+  }
+
+  // When an image is copied from a preview window, you end up with two
+  // DataTransferItems one of which is a file's metadata as text.  Skip those.
+  if (this.isImage()) {
+    return false;
+  }
+
+  return this.types.some(function (type) {
+    return RICH_TEXT_TYPES[type];
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Deferred" id="apidoc.module.fbjs.Deferred">module fbjs.Deferred</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.Deferred" id="apidoc.element.fbjs.Deferred.Deferred">
+        function <span class="apidocSignatureSpan">fbjs.</span>Deferred
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Deferred() {
+  var _this = this;
+
+  _classCallCheck(this, Deferred);
+
+  this._settled = false;
+  this._promise = new Promise(function (resolve, reject) {
+    _this._resolve = resolve;
+    _this._reject = reject;
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Deferred.prototype" id="apidoc.module.fbjs.Deferred.prototype">module fbjs.Deferred.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.catch" id="apidoc.element.fbjs.Deferred.prototype.catch">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>catch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _catch() {
+  return Promise.prototype["catch"].apply(this._promise, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.done" id="apidoc.element.fbjs.Deferred.prototype.done">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>done
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function done() {
+  // Embed the polyfill for the non-standard Promise.prototype.done so that
+  // users of the open source fbjs don't need a custom lib for Promise
+  var promise = arguments.length ? this._promise.then.apply(this._promise, arguments) : this._promise;
+  promise.then(undefined, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.getPromise" id="apidoc.element.fbjs.Deferred.prototype.getPromise">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>getPromise
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPromise() {
+  return this._promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function PromiseMap() {
+  _classCallCheck(this, PromiseMap);
+
+  this._deferred = {};
+}
+
+PromiseMap.prototype.get = function get(key) {
+  return getDeferred(this._deferred, key).<span class="apidocCodeKeywordSpan">getPromise</span>();
+};
+
+PromiseMap.prototype.resolveKey = function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.resolve(value);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.isSettled" id="apidoc.element.fbjs.Deferred.prototype.isSettled">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>isSettled
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSettled() {
+  return this._settled;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+PromiseMap.prototype.get = function get(key) {
+  return getDeferred(this._deferred, key).getPromise();
+};
+
+PromiseMap.prototype.resolveKey = function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.<span class="apidocCodeKeywordSpan">isSettled</span>() ? process.env.NODE_ENV !== 'production' ? invariant(false
+, 'PromiseMap: Already settled `%s`.', key) : invariant(false) : void 0;
+  entry.resolve(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.reject(reason);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.reject" id="apidoc.element.fbjs.Deferred.prototype.reject">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>reject
+        <span class="apidocSignatureSpan">(reason)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reject(reason) {
+  this._settled = true;
+  this._reject(reason);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.resolve(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">reject</span>(reason);
+};
+
+return PromiseMap;
+}();
+
+function getDeferred(entries, key) {
+if (!entries.hasOwnProperty(key)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.resolve" id="apidoc.element.fbjs.Deferred.prototype.resolve">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolve(value) {
+  this._settled = true;
+  this._resolve(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+PromiseMap.prototype.get = function get(key) {
+  return getDeferred(this._deferred, key).getPromise();
+};
+
+PromiseMap.prototype.resolveKey = function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">resolve</span>(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.reject(reason);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Deferred.prototype.then" id="apidoc.element.fbjs.Deferred.prototype.then">
+        function <span class="apidocSignatureSpan">fbjs.Deferred.prototype.</span>then
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function then() {
+  return Promise.prototype.then.apply(this._promise, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return Promise.prototype.then.apply(this._promise, arguments);
+};
+
+Deferred.prototype.done = function done() {
+  // Embed the polyfill for the non-standard Promise.prototype.done so that
+  // users of the open source fbjs don't need a custom lib for Promise
+  var promise = arguments.length ? this._promise.then.apply(this._promise, arguments) : this._promise;
+  promise.<span class="apidocCodeKeywordSpan">then</span>(undefined, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+};
+
+Deferred.prototype.isSettled = function isSettled() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.ErrorUtils" id="apidoc.module.fbjs.ErrorUtils">module fbjs.ErrorUtils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.ErrorUtils.applyWithGuard" id="apidoc.element.fbjs.ErrorUtils.applyWithGuard">
+        function <span class="apidocSignatureSpan">fbjs.ErrorUtils.</span>applyWithGuard
+        <span class="apidocSignatureSpan">(callback, context, args, onError, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function applyWithGuard(callback, context, args, onError, name) {
+  return callback.apply(context, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.ErrorUtils.guard" id="apidoc.element.fbjs.ErrorUtils.guard">
+        function <span class="apidocSignatureSpan">fbjs.ErrorUtils.</span>guard
+        <span class="apidocSignatureSpan">(callback, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function guard(callback, name) {
+  return callback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.EventListener" id="apidoc.module.fbjs.EventListener">module fbjs.EventListener</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.EventListener.capture" id="apidoc.element.fbjs.EventListener.capture">
+        function <span class="apidocSignatureSpan">fbjs.EventListener.</span>capture
+        <span class="apidocSignatureSpan">(target, eventType, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function capture(target, eventType, callback) {
+  if (target.addEventListener) {
+    target.addEventListener(eventType, callback, true);
+    return {
+      remove: function remove() {
+        target.removeEventListener(eventType, callback, true);
+      }
+    };
+  } else {
+    if (process.env.NODE_ENV !== 'production') {
+      console.error('Attempted to listen to events during the capture phase on a ' + 'browser that does not support the capture
+phase. Your application ' + 'will not receive some events.');
+    }
+    return {
+      remove: emptyFunction
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.EventListener.listen" id="apidoc.element.fbjs.EventListener.listen">
+        function <span class="apidocSignatureSpan">fbjs.EventListener.</span>listen
+        <span class="apidocSignatureSpan">(target, eventType, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function listen(target, eventType, callback) {
+  if (target.addEventListener) {
+    target.addEventListener(eventType, callback, false);
+    return {
+      remove: function remove() {
+        target.removeEventListener(eventType, callback, false);
+      }
+    };
+  } else if (target.attachEvent) {
+    target.attachEvent('on' + eventType, callback);
+    return {
+      remove: function remove() {
+        target.detachEvent('on' + eventType, callback);
+      }
+    };
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.EventListener.registerDefault" id="apidoc.element.fbjs.EventListener.registerDefault">
+        function <span class="apidocSignatureSpan">fbjs.EventListener.</span>registerDefault
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function registerDefault() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.PhotosMimeType" id="apidoc.module.fbjs.PhotosMimeType">module fbjs.PhotosMimeType</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PhotosMimeType.isImage" id="apidoc.element.fbjs.PhotosMimeType.isImage">
+        function <span class="apidocSignatureSpan">fbjs.PhotosMimeType.</span>isImage
+        <span class="apidocSignatureSpan">(mimeString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isImage(mimeString) {
+  return getParts(mimeString)[0] === 'image';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // there's accompanying text.
+  if (this.getHTML() &amp;&amp; this.getText()) {
+    return true;
+  }
+
+  // When an image is copied from a preview window, you end up with two
+  // DataTransferItems one of which is a file's metadata as text.  Skip those.
+  if (this.<span class="apidocCodeKeywordSpan">isImage</span>()) {
+    return false;
+  }
+
+  return this.types.some(function (type) {
+    return RICH_TEXT_TYPES[type];
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PhotosMimeType.isJpeg" id="apidoc.element.fbjs.PhotosMimeType.isJpeg">
+        function <span class="apidocSignatureSpan">fbjs.PhotosMimeType.</span>isJpeg
+        <span class="apidocSignatureSpan">(mimeString)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isJpeg(mimeString) {
+  var parts = getParts(mimeString);
+  return PhotosMimeType.isImage(mimeString) &amp;&amp; (
+  // see http://fburl.com/10972194
+  parts[1] === 'jpeg' || parts[1] === 'pjpeg');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Promise" id="apidoc.module.fbjs.Promise">module fbjs.Promise</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.Promise" id="apidoc.element.fbjs.Promise.Promise">
+        function <span class="apidocSignatureSpan">fbjs.</span>Promise
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fn) {
+  if (typeof this !== 'object') {
+    throw new TypeError('Promises must be constructed via new');
+  }
+  if (typeof fn !== 'function') {
+    throw new TypeError('not a function');
+  }
+  this._45 = 0;
+  this._81 = 0;
+  this._65 = null;
+  this._54 = null;
+  if (fn === noop) return;
+  doResolve(fn, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise._61" id="apidoc.element.fbjs.Promise._61">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>_61
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.all" id="apidoc.element.fbjs.Promise.all">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>all
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (arr) {
+  var args = Array.prototype.slice.call(arr);
+
+  return new Promise(function (resolve, reject) {
+    if (args.length === 0) return resolve([]);
+    var remaining = args.length;
+    function res(i, val) {
+      if (val &amp;&amp; (typeof val === 'object' || typeof val === 'function')) {
+        if (val instanceof Promise &amp;&amp; val.then === Promise.prototype.then) {
+          while (val._81 === 3) {
+            val = val._65;
+          }
+          if (val._81 === 1) return res(i, val._65);
+          if (val._81 === 2) reject(val._65);
+          val.then(function (val) {
+            res(i, val);
+          }, reject);
+          return;
+        } else {
+          var then = val.then;
+          if (typeof then === 'function') {
+            var p = new Promise(then.bind(val));
+            p.then(function (val) {
+              res(i, val);
+            }, reject);
+            return;
+          }
+        }
+      }
+      args[i] = val;
+      if (--remaining === 0) {
+        resolve(args);
+      }
+    }
+    for (var i = 0; i &lt; args.length; i++) {
+      res(i, args[i]);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.denodeify" id="apidoc.element.fbjs.Promise.denodeify">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>denodeify
+        <span class="apidocSignatureSpan">(fn, argumentCount)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">denodeify = function (fn, argumentCount) {
+  if (
+    typeof argumentCount === 'number' &amp;&amp; argumentCount !== Infinity
+  ) {
+    return denodeifyWithCount(fn, argumentCount);
+  } else {
+    return denodeifyWithoutCount(fn);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.disableSynchronous" id="apidoc.element.fbjs.Promise.disableSynchronous">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>disableSynchronous
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disableSynchronous = function () {
+  Promise.prototype.isPending = undefined;
+  Promise.prototype.isFulfilled = undefined;
+  Promise.prototype.isRejected = undefined;
+  Promise.prototype.getValue = undefined;
+  Promise.prototype.getReason = undefined;
+  Promise.prototype.getState = undefined;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.enableSynchronous" id="apidoc.element.fbjs.Promise.enableSynchronous">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>enableSynchronous
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enableSynchronous = function () {
+  Promise.prototype.isPending = function() {
+    return this.getState() == 0;
+  };
+
+  Promise.prototype.isFulfilled = function() {
+    return this.getState() == 1;
+  };
+
+  Promise.prototype.isRejected = function() {
+    return this.getState() == 2;
+  };
+
+  Promise.prototype.getValue = function () {
+    if (this._81 === 3) {
+      return this._65.getValue();
+    }
+
+    if (!this.isFulfilled()) {
+      throw new Error('Cannot get a value of an unfulfilled promise.');
+    }
+
+    return this._65;
+  };
+
+  Promise.prototype.getReason = function () {
+    if (this._81 === 3) {
+      return this._65.getReason();
+    }
+
+    if (!this.isRejected()) {
+      throw new Error('Cannot get a rejection reason of a non-rejected promise.');
+    }
+
+    return this._65;
+  };
+
+  Promise.prototype.getState = function () {
+    if (this._81 === 3) {
+      return this._65.getState();
+    }
+    if (this._81 === -1 || this._81 === -2) {
+      return 0;
+    }
+
+    return this._81;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.nodeify" id="apidoc.element.fbjs.Promise.nodeify">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>nodeify
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodeify = function (fn) {
+  return function () {
+    var args = Array.prototype.slice.call(arguments);
+    var callback =
+      typeof args[args.length - 1] === 'function' ? args.pop() : null;
+    var ctx = this;
+    try {
+      return fn.apply(this, arguments).nodeify(callback, ctx);
+    } catch (ex) {
+      if (callback === null || typeof callback == 'undefined') {
+        return new Promise(function (resolve, reject) {
+          reject(ex);
+        });
+      } else {
+        asap(function () {
+          callback.call(ctx, ex);
+        })
+      }
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.race" id="apidoc.element.fbjs.Promise.race">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>race
+        <span class="apidocSignatureSpan">(values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">race = function (values) {
+  return new Promise(function (resolve, reject) {
+    values.forEach(function(value){
+      Promise.resolve(value).then(resolve, reject);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.reject" id="apidoc.element.fbjs.Promise.reject">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>reject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reject = function (value) {
+  return new Promise(function (resolve, reject) {
+    reject(value);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.resolve(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">reject</span>(reason);
+};
+
+return PromiseMap;
+}();
+
+function getDeferred(entries, key) {
+if (!entries.hasOwnProperty(key)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.resolve" id="apidoc.element.fbjs.Promise.resolve">
+        function <span class="apidocSignatureSpan">fbjs.Promise.</span>resolve
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (value) {
+  if (value instanceof Promise) return value;
+
+  if (value === null) return NULL;
+  if (value === undefined) return UNDEFINED;
+  if (value === true) return TRUE;
+  if (value === false) return FALSE;
+  if (value === 0) return ZERO;
+  if (value === '') return EMPTYSTRING;
+
+  if (typeof value === 'object' || typeof value === 'function') {
+    try {
+      var then = value.then;
+      if (typeof then === 'function') {
+        return new Promise(then.bind(value));
+      }
+    } catch (ex) {
+      return new Promise(function (resolve, reject) {
+        reject(ex);
+      });
+    }
+  }
+  return valuePromise(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+PromiseMap.prototype.get = function get(key) {
+  return getDeferred(this._deferred, key).getPromise();
+};
+
+PromiseMap.prototype.resolveKey = function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">resolve</span>(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.reject(reason);
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Promise.prototype" id="apidoc.module.fbjs.Promise.prototype">module fbjs.Promise.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.prototype.catch" id="apidoc.element.fbjs.Promise.prototype.catch">
+        function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>catch
+        <span class="apidocSignatureSpan">(onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">catch = function (onRejected) {
+  return this.then(null, onRejected);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.prototype.done" id="apidoc.element.fbjs.Promise.prototype.done">
+        function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>done
+        <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">done = function (onFulfilled, onRejected) {
+  var self = arguments.length ? this.then.apply(this, arguments) : this;
+  self.then(null, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.prototype.finally" id="apidoc.element.fbjs.Promise.prototype.finally">
+        function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>finally
+        <span class="apidocSignatureSpan">(f)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finally = function (f) {
+  return this.then(function (value) {
+    return Promise.resolve(f()).then(function () {
+      return value;
+    });
+  }, function (err) {
+    return Promise.resolve(f()).then(function () {
+      throw err;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.prototype.nodeify" id="apidoc.element.fbjs.Promise.prototype.nodeify">
+        function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>nodeify
+        <span class="apidocSignatureSpan">(callback, ctx)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nodeify = function (callback, ctx) {
+  if (typeof callback != 'function') return this;
+
+  this.then(function (value) {
+    asap(function () {
+      callback.call(ctx, null, value);
+    });
+  }, function (err) {
+    asap(function () {
+      callback.call(ctx, err);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise.prototype.then" id="apidoc.element.fbjs.Promise.prototype.then">
+        function <span class="apidocSignatureSpan">fbjs.Promise.prototype.</span>then
+        <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">then = function (onFulfilled, onRejected) {
+  if (this.constructor !== Promise) {
+    return safeThen(this, onFulfilled, onRejected);
+  }
+  var res = new Promise(noop);
+  handle(this, new Handler(onFulfilled, onRejected, res));
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return Promise.prototype.then.apply(this._promise, arguments);
+};
+
+Deferred.prototype.done = function done() {
+  // Embed the polyfill for the non-standard Promise.prototype.done so that
+  // users of the open source fbjs don't need a custom lib for Promise
+  var promise = arguments.length ? this._promise.then.apply(this._promise, arguments) : this._promise;
+  promise.<span class="apidocCodeKeywordSpan">then</span>(undefined, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+};
+
+Deferred.prototype.isSettled = function isSettled() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.PromiseMap" id="apidoc.module.fbjs.PromiseMap">module fbjs.PromiseMap</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PromiseMap.PromiseMap" id="apidoc.element.fbjs.PromiseMap.PromiseMap">
+        function <span class="apidocSignatureSpan">fbjs.</span>PromiseMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function PromiseMap() {
+  _classCallCheck(this, PromiseMap);
+
+  this._deferred = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.PromiseMap.prototype" id="apidoc.module.fbjs.PromiseMap.prototype">module fbjs.PromiseMap.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PromiseMap.prototype.get" id="apidoc.element.fbjs.PromiseMap.prototype.get">
+        function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>get
+        <span class="apidocSignatureSpan">(key)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(key) {
+  return getDeferred(this._deferred, key).getPromise();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @param {DOMNode} element [description]
+ * @param {string} name Overflow style property name.
+ * @return {boolean} True if the supplied ndoe is scrollable.
+ */
+function _isNodeScrollable(element, name) {
+  var overflow = Style.<span class="apidocCodeKeywordSpan">get</span>(element, name);
+  return overflow === 'auto' || overflow === 'scroll';
+}
+
+/**
+ * Utilities for querying and mutating style properties.
+ */
+var Style = {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PromiseMap.prototype.rejectKey" id="apidoc.element.fbjs.PromiseMap.prototype.rejectKey">
+        function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>rejectKey
+        <span class="apidocSignatureSpan">(key, reason)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s`.', key) : invariant
+(false) : void 0;
+  entry.reject(reason);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.PromiseMap.prototype.resolveKey" id="apidoc.element.fbjs.PromiseMap.prototype.resolveKey">
+        function <span class="apidocSignatureSpan">fbjs.PromiseMap.prototype.</span>resolveKey
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s`.', key) : invariant
+(false) : void 0;
+  entry.resolve(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Promise_native" id="apidoc.module.fbjs.Promise_native">module fbjs.Promise_native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.Promise_native" id="apidoc.element.fbjs.Promise_native.Promise_native">
+        function <span class="apidocSignatureSpan">fbjs.</span>Promise_native
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise(fn) {
+  if (typeof this !== 'object') {
+    throw new TypeError('Promises must be constructed via new');
+  }
+  if (typeof fn !== 'function') {
+    throw new TypeError('not a function');
+  }
+  this._45 = 0;
+  this._81 = 0;
+  this._65 = null;
+  this._54 = null;
+  if (fn === noop) return;
+  doResolve(fn, this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native._61" id="apidoc.element.fbjs.Promise_native._61">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>_61
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.all" id="apidoc.element.fbjs.Promise_native.all">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>all
+        <span class="apidocSignatureSpan">(arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">all = function (arr) {
+  var args = Array.prototype.slice.call(arr);
+
+  return new Promise(function (resolve, reject) {
+    if (args.length === 0) return resolve([]);
+    var remaining = args.length;
+    function res(i, val) {
+      if (val &amp;&amp; (typeof val === 'object' || typeof val === 'function')) {
+        if (val instanceof Promise &amp;&amp; val.then === Promise.prototype.then) {
+          while (val._81 === 3) {
+            val = val._65;
+          }
+          if (val._81 === 1) return res(i, val._65);
+          if (val._81 === 2) reject(val._65);
+          val.then(function (val) {
+            res(i, val);
+          }, reject);
+          return;
+        } else {
+          var then = val.then;
+          if (typeof then === 'function') {
+            var p = new Promise(then.bind(val));
+            p.then(function (val) {
+              res(i, val);
+            }, reject);
+            return;
+          }
+        }
+      }
+      args[i] = val;
+      if (--remaining === 0) {
+        resolve(args);
+      }
+    }
+    for (var i = 0; i &lt; args.length; i++) {
+      res(i, args[i]);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.race" id="apidoc.element.fbjs.Promise_native.race">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>race
+        <span class="apidocSignatureSpan">(values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">race = function (values) {
+  return new Promise(function (resolve, reject) {
+    values.forEach(function(value){
+      Promise.resolve(value).then(resolve, reject);
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.reject" id="apidoc.element.fbjs.Promise_native.reject">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>reject
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reject = function (value) {
+  return new Promise(function (resolve, reject) {
+    reject(value);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.resolve(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">reject</span>(reason);
+};
+
+return PromiseMap;
+}();
+
+function getDeferred(entries, key) {
+if (!entries.hasOwnProperty(key)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.resolve" id="apidoc.element.fbjs.Promise_native.resolve">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.</span>resolve
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (value) {
+  if (value instanceof Promise) return value;
+
+  if (value === null) return NULL;
+  if (value === undefined) return UNDEFINED;
+  if (value === true) return TRUE;
+  if (value === false) return FALSE;
+  if (value === 0) return ZERO;
+  if (value === '') return EMPTYSTRING;
+
+  if (typeof value === 'object' || typeof value === 'function') {
+    try {
+      var then = value.then;
+      if (typeof then === 'function') {
+        return new Promise(then.bind(value));
+      }
+    } catch (ex) {
+      return new Promise(function (resolve, reject) {
+        reject(ex);
+      });
+    }
+  }
+  return valuePromise(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+PromiseMap.prototype.get = function get(key) {
+  return getDeferred(this._deferred, key).getPromise();
+};
+
+PromiseMap.prototype.resolveKey = function resolveKey(key, value) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.<span class="apidocCodeKeywordSpan">resolve</span>(value);
+};
+
+PromiseMap.prototype.rejectKey = function rejectKey(key, reason) {
+  var entry = getDeferred(this._deferred, key);
+  !!entry.isSettled() ? process.env.NODE_ENV !== 'production' ? invariant(false, 'PromiseMap: Already settled `%s
+`.', key) : invariant(false) : void 0;
+  entry.reject(reason);
+};
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Promise_native.prototype" id="apidoc.module.fbjs.Promise_native.prototype">module fbjs.Promise_native.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.prototype.catch" id="apidoc.element.fbjs.Promise_native.prototype.catch">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>catch
+        <span class="apidocSignatureSpan">(onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">catch = function (onRejected) {
+  return this.then(null, onRejected);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.prototype.done" id="apidoc.element.fbjs.Promise_native.prototype.done">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>done
+        <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">done = function (onFulfilled, onRejected) {
+  var self = arguments.length ? this.then.apply(this, arguments) : this;
+  self.then(null, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.prototype.finally" id="apidoc.element.fbjs.Promise_native.prototype.finally">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>finally
+        <span class="apidocSignatureSpan">(onSettled)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">finally = function (onSettled) {
+  return this.then(onSettled, onSettled);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Promise_native.prototype.then" id="apidoc.element.fbjs.Promise_native.prototype.then">
+        function <span class="apidocSignatureSpan">fbjs.Promise_native.prototype.</span>then
+        <span class="apidocSignatureSpan">(onFulfilled, onRejected)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">then = function (onFulfilled, onRejected) {
+  if (this.constructor !== Promise) {
+    return safeThen(this, onFulfilled, onRejected);
+  }
+  var res = new Promise(noop);
+  handle(this, new Handler(onFulfilled, onRejected, res));
+  return res;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  return Promise.prototype.then.apply(this._promise, arguments);
+};
+
+Deferred.prototype.done = function done() {
+  // Embed the polyfill for the non-standard Promise.prototype.done so that
+  // users of the open source fbjs don't need a custom lib for Promise
+  var promise = arguments.length ? this._promise.then.apply(this._promise, arguments) : this._promise;
+  promise.<span class="apidocCodeKeywordSpan">then</span>(undefined, function (err) {
+    setTimeout(function () {
+      throw err;
+    }, 0);
+  });
+};
+
+Deferred.prototype.isSettled = function isSettled() {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Scroll" id="apidoc.module.fbjs.Scroll">module fbjs.Scroll</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Scroll.getLeft" id="apidoc.element.fbjs.Scroll.getLeft">
+        function <span class="apidocSignatureSpan">fbjs.Scroll.</span>getLeft
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getLeft(element) {
+  var doc = element.ownerDocument;
+  return _isViewportScrollElement(element, doc) ? doc.body.scrollLeft || doc.documentElement.scrollLeft : element.scrollLeft;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Scroll.getTop" id="apidoc.element.fbjs.Scroll.getTop">
+        function <span class="apidocSignatureSpan">fbjs.Scroll.</span>getTop
+        <span class="apidocSignatureSpan">(element)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getTop(element) {
+  var doc = element.ownerDocument;
+  return _isViewportScrollElement(element, doc) ?
+  // In practice, they will either both have the same value,
+  // or one will be zero and the other will be the scroll position
+  // of the viewport. So we can use `X || Y` instead of `Math.max(X, Y)`
+  doc.body.scrollTop || doc.documentElement.scrollTop : element.scrollTop;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Scroll.setLeft" id="apidoc.element.fbjs.Scroll.setLeft">
+        function <span class="apidocSignatureSpan">fbjs.Scroll.</span>setLeft
+        <span class="apidocSignatureSpan">(element, newLeft)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setLeft(element, newLeft) {
+  var doc = element.ownerDocument;
+  if (_isViewportScrollElement(element, doc)) {
+    doc.body.scrollLeft = doc.documentElement.scrollLeft = newLeft;
+  } else {
+    element.scrollLeft = newLeft;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Scroll.setTop" id="apidoc.element.fbjs.Scroll.setTop">
+        function <span class="apidocSignatureSpan">fbjs.Scroll.</span>setTop
+        <span class="apidocSignatureSpan">(element, newTop)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setTop(element, newTop) {
+  var doc = element.ownerDocument;
+  if (_isViewportScrollElement(element, doc)) {
+    doc.body.scrollTop = doc.documentElement.scrollTop = newTop;
+  } else {
+    element.scrollTop = newTop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.Style" id="apidoc.module.fbjs.Style">module fbjs.Style</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Style.get" id="apidoc.element.fbjs.Style.get">
+        function <span class="apidocSignatureSpan">fbjs.Style.</span>get
+        <span class="apidocSignatureSpan">(node, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getStyleProperty(node, name) /*?string*/{
+  var computedStyle = void 0;
+
+  // W3C Standard
+  if (window.getComputedStyle) {
+    // In certain cases such as within an iframe in FF3, this returns null.
+    computedStyle = window.getComputedStyle(node, null);
+    if (computedStyle) {
+      return asString(computedStyle.getPropertyValue(hyphenate(name)));
+    }
+  }
+  // Safari
+  if (document.defaultView &amp;&amp; document.defaultView.getComputedStyle) {
+    computedStyle = document.defaultView.getComputedStyle(node, null);
+    // A Safari bug causes this to return null for `display: none` elements.
+    if (computedStyle) {
+      return asString(computedStyle.getPropertyValue(hyphenate(name)));
+    }
+    if (name === 'display') {
+      return 'none';
+    }
+  }
+  // Internet Explorer
+  if (node.currentStyle) {
+    if (name === 'float') {
+      return asString(node.currentStyle.cssFloat || node.currentStyle.styleFloat);
+    }
+    return asString(node.currentStyle[camelize(name)]);
+  }
+  return asString(node.style &amp;&amp; node.style[camelize(name)]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @param {DOMNode} element [description]
+ * @param {string} name Overflow style property name.
+ * @return {boolean} True if the supplied ndoe is scrollable.
+ */
+function _isNodeScrollable(element, name) {
+  var overflow = Style.<span class="apidocCodeKeywordSpan">get</span>(element, name);
+  return overflow === 'auto' || overflow === 'scroll';
+}
+
+/**
+ * Utilities for querying and mutating style properties.
+ */
+var Style = {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.Style.getScrollParent" id="apidoc.element.fbjs.Style.getScrollParent">
+        function <span class="apidocSignatureSpan">fbjs.Style.</span>getScrollParent
+        <span class="apidocSignatureSpan">(node)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getScrollParent(node) {
+  if (!node) {
+    return null;
+  }
+  var ownerDocument = node.ownerDocument;
+  while (node &amp;&amp; node !== ownerDocument.body) {
+    if (_isNodeScrollable(node, 'overflow') || _isNodeScrollable(node, 'overflowY') || _isNodeScrollable(node, 'overflowX')) {
+      return node;
+    }
+    node = node.parentNode;
+  }
+  return ownerDocument.defaultView || ownerDocument.parentWindow;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.TokenizeUtil" id="apidoc.module.fbjs.TokenizeUtil">module fbjs.TokenizeUtil</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.TokenizeUtil.getPunctuation" id="apidoc.element.fbjs.TokenizeUtil.getPunctuation">
+        function <span class="apidocSignatureSpan">fbjs.TokenizeUtil.</span>getPunctuation
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPunctuation() {
+  return PUNCTUATION;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.TouchEventUtils" id="apidoc.module.fbjs.TouchEventUtils">module fbjs.TouchEventUtils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.TouchEventUtils.extractSingleTouch" id="apidoc.element.fbjs.TouchEventUtils.extractSingleTouch">
+        function <span class="apidocSignatureSpan">fbjs.TouchEventUtils.</span>extractSingleTouch
+        <span class="apidocSignatureSpan">(nativeEvent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function extractSingleTouch(nativeEvent) {
+  var touches = nativeEvent.touches;
+  var changedTouches = nativeEvent.changedTouches;
+  var hasTouches = touches &amp;&amp; touches.length &gt; 0;
+  var hasChangedTouches = changedTouches &amp;&amp; changedTouches.length &gt; 0;
+
+  return !hasTouches &amp;&amp; hasChangedTouches ? changedTouches[0] : hasTouches ? touches[0] : nativeEvent;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.URI" id="apidoc.module.fbjs.URI">module fbjs.URI</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.URI.URI" id="apidoc.element.fbjs.URI.URI">
+        function <span class="apidocSignatureSpan">fbjs.</span>URI
+        <span class="apidocSignatureSpan">(uri)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function URI(uri) {
+  _classCallCheck(this, URI);
+
+  this._uri = uri;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.URI.prototype" id="apidoc.module.fbjs.URI.prototype">module fbjs.URI.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.URI.prototype.toString" id="apidoc.element.fbjs.URI.prototype.toString">
+        function <span class="apidocSignatureSpan">fbjs.URI.prototype.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() {
+  return this._uri;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+/**
+ * @param {number} codePoint  Valid Unicode code-point
+ * @param {number} len        Zero-padded minimum width of result
+ * @return {string}           A zero-padded hexadecimal string (00XXXX)
+ */
+function zeroPaddedHex(codePoint, len) {
+var codePointHex = codePoint.<span class="apidocCodeKeywordSpan">toString</span>(16).toUpperCase();
+var numZeros = Math.max(0, len - codePointHex.length);
+var result = '';
+for (var i = 0; i &lt; numZeros; i++) {
+  result += '0';
+}
+result += codePointHex;
+return result;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeBidi" id="apidoc.module.fbjs.UnicodeBidi">module fbjs.UnicodeBidi</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.firstStrongChar" id="apidoc.element.fbjs.UnicodeBidi.firstStrongChar">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>firstStrongChar
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function firstStrongChar(str) {
+  var match = REGEX_STRONG.exec(str);
+  return match == null ? null : match[0];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.firstStrongCharDir" id="apidoc.element.fbjs.UnicodeBidi.firstStrongCharDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>firstStrongCharDir
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function firstStrongCharDir(str) {
+  var strongChar = firstStrongChar(str);
+  if (strongChar == null) {
+    return UnicodeBidiDirection.NEUTRAL;
+  }
+  return REGEX_RTL.exec(strongChar) ? UnicodeBidiDirection.RTL : UnicodeBidiDirection.LTR;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.getDirection" id="apidoc.element.fbjs.UnicodeBidi.getDirection">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>getDirection
+        <span class="apidocSignatureSpan">(str, strongFallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDirection(str, strongFallback) {
+  if (!strongFallback) {
+    strongFallback = UnicodeBidiDirection.getGlobalDir();
+  }
+  !UnicodeBidiDirection.isStrong(strongFallback) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Fallback direction
+must be a strong direction') : invariant(false) : void 0;
+  return resolveBlockDir(str, strongFallback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* var bidiService = new UnicodeBidiService();
+*
+* ...
+*
+* bidiService.reset();
+* for (var para in paragraphs) {
+*   var dir = bidiService.<span class="apidocCodeKeywordSpan">getDirection</span>(para);
+*   ...
+* }
+* ```
+*
+* Part of our implementation of Unicode Bidirectional Algorithm (UBA)
+* Unicode Standard Annex #9 (UAX9)
+* http://www.unicode.org/reports/tr9/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.isDirectionLTR" id="apidoc.element.fbjs.UnicodeBidi.isDirectionLTR">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>isDirectionLTR
+        <span class="apidocSignatureSpan">(str, strongFallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDirectionLTR(str, strongFallback) {
+  return getDirection(str, strongFallback) === UnicodeBidiDirection.LTR;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.isDirectionRTL" id="apidoc.element.fbjs.UnicodeBidi.isDirectionRTL">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>isDirectionRTL
+        <span class="apidocSignatureSpan">(str, strongFallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isDirectionRTL(str, strongFallback) {
+  return getDirection(str, strongFallback) === UnicodeBidiDirection.RTL;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidi.resolveBlockDir" id="apidoc.element.fbjs.UnicodeBidi.resolveBlockDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidi.</span>resolveBlockDir
+        <span class="apidocSignatureSpan">(str, fallback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function resolveBlockDir(str, fallback) {
+  fallback = fallback || UnicodeBidiDirection.NEUTRAL;
+  if (!str.length) {
+    return fallback;
+  }
+  var blockDir = firstStrongCharDir(str);
+  return blockDir === UnicodeBidiDirection.NEUTRAL ? fallback : blockDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeBidiDirection" id="apidoc.module.fbjs.UnicodeBidiDirection">module fbjs.UnicodeBidiDirection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.getGlobalDir" id="apidoc.element.fbjs.UnicodeBidiDirection.getGlobalDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getGlobalDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getGlobalDir() {
+  if (!globalDir) {
+    this.initGlobalDir();
+  }
+  !globalDir ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Global direction not set.') : invariant(false) : void 0
+;
+  return globalDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* @param str             A text block; e.g. paragraph, table cell
+* @param strongFallback  Fallback direction, used if no strong direction
+*                        detected for the block (default = global direction)
+* @return                The resolved Strong direction
+*/
+function getDirection(str, strongFallback) {
+ if (!strongFallback) {
+   strongFallback = UnicodeBidiDirection.<span class="apidocCodeKeywordSpan">getGlobalDir</span>();
+ }
+ !UnicodeBidiDirection.isStrong(strongFallback) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Fallback
+ direction must be a strong direction') : invariant(false) : void 0;
+ return resolveBlockDir(str, strongFallback);
+}
+
+/**
+* Returns true if getDirection(arguments...) returns LTR.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDir" id="apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getHTMLDir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getHTMLDir(dir) {
+  !isStrong(dir) ? process.env.NODE_ENV !== 'production' ? invariant(false, '`dir` must be a strong direction to be converted to
+ HTML Direction') : invariant(false) : void 0;
+  return dir === LTR ? 'ltr' : 'rtl';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDirIfDifferent" id="apidoc.element.fbjs.UnicodeBidiDirection.getHTMLDirIfDifferent">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>getHTMLDirIfDifferent
+        <span class="apidocSignatureSpan">(dir, otherDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getHTMLDirIfDifferent(dir, otherDir) {
+  !isStrong(dir) ? process.env.NODE_ENV !== 'production' ? invariant(false, '`dir` must be a strong direction to be converted to
+ HTML Direction') : invariant(false) : void 0;
+  !isStrong(otherDir) ? process.env.NODE_ENV !== 'production' ? invariant(false, '`otherDir` must be a strong direction to be converted
+ to HTML Direction') : invariant(false) : void 0;
+  return dir === otherDir ? null : getHTMLDir(dir);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.initGlobalDir" id="apidoc.element.fbjs.UnicodeBidiDirection.initGlobalDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>initGlobalDir
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function initGlobalDir() {
+  setGlobalDir(LTR);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+/**
+ * Get the global direction
+ */
+function getGlobalDir() {
+if (!globalDir) {
+  this.<span class="apidocCodeKeywordSpan">initGlobalDir</span>();
+}
+!globalDir ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Global direction not set.') : invariant
+(false) : void 0;
+return globalDir;
+}
+
+var UnicodeBidiDirection = {
+// Values
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.isStrong" id="apidoc.element.fbjs.UnicodeBidiDirection.isStrong">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>isStrong
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isStrong(dir) {
+  return dir === LTR || dir === RTL;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*                        detected for the block (default = global direction)
+* @return                The resolved Strong direction
+*/
+function getDirection(str, strongFallback) {
+ if (!strongFallback) {
+   strongFallback = UnicodeBidiDirection.getGlobalDir();
+ }
+ !UnicodeBidiDirection.<span class="apidocCodeKeywordSpan">isStrong</span>(strongFallback) ? process.env.NODE_ENV !== 'production
+' ? invariant(false, 'Fallback direction must be a strong direction') : invariant(false) : void 0;
+ return resolveBlockDir(str, strongFallback);
+}
+
+/**
+* Returns true if getDirection(arguments...) returns LTR.
+*
+* @param str             A text block; e.g. paragraph, table cell
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiDirection.setGlobalDir" id="apidoc.element.fbjs.UnicodeBidiDirection.setGlobalDir">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiDirection.</span>setGlobalDir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setGlobalDir(dir) {
+  globalDir = dir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeBidiService" id="apidoc.module.fbjs.UnicodeBidiService">module fbjs.UnicodeBidiService</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiService.UnicodeBidiService" id="apidoc.element.fbjs.UnicodeBidiService.UnicodeBidiService">
+        function <span class="apidocSignatureSpan">fbjs.</span>UnicodeBidiService
+        <span class="apidocSignatureSpan">(defaultDir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function UnicodeBidiService(defaultDir) {
+  _classCallCheck(this, UnicodeBidiService);
+
+  if (!defaultDir) {
+    defaultDir = UnicodeBidiDirection.getGlobalDir();
+  } else {
+    !UnicodeBidiDirection.isStrong(defaultDir) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'Default direction must
+ be a strong direction (LTR or RTL)') : invariant(false) : void 0;
+  }
+  this._defaultDir = defaultDir;
+  this.reset();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeBidiService.prototype" id="apidoc.module.fbjs.UnicodeBidiService.prototype">module fbjs.UnicodeBidiService.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiService.prototype.getDirection" id="apidoc.element.fbjs.UnicodeBidiService.prototype.getDirection">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiService.prototype.</span>getDirection
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getDirection(str) {
+  this._lastDir = UnicodeBidi.getDirection(str, this._lastDir);
+  return this._lastDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*
+* var bidiService = new UnicodeBidiService();
+*
+* ...
+*
+* bidiService.reset();
+* for (var para in paragraphs) {
+*   var dir = bidiService.<span class="apidocCodeKeywordSpan">getDirection</span>(para);
+*   ...
+* }
+* ```
+*
+* Part of our implementation of Unicode Bidirectional Algorithm (UBA)
+* Unicode Standard Annex #9 (UAX9)
+* http://www.unicode.org/reports/tr9/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeBidiService.prototype.reset" id="apidoc.element.fbjs.UnicodeBidiService.prototype.reset">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeBidiService.prototype.</span>reset
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function reset() {
+  this._lastDir = this._defaultDir;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* ```
+* var UnicodeBidiService = require('UnicodeBidiService');
+*
+* var bidiService = new UnicodeBidiService();
+*
+* ...
+*
+* bidiService.<span class="apidocCodeKeywordSpan">reset</span>();
+* for (var para in paragraphs) {
+*   var dir = bidiService.getDirection(para);
+*   ...
+* }
+* ```
+*
+* Part of our implementation of Unicode Bidirectional Algorithm (UBA)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeCJK" id="apidoc.module.fbjs.UnicodeCJK">module fbjs.UnicodeCJK</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.hasIdeoOrSyll" id="apidoc.element.fbjs.UnicodeCJK.hasIdeoOrSyll">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasIdeoOrSyll
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasIdeoOrSyll(str) {
+  REGEX_IDEO_OR_SYLL = REGEX_IDEO_OR_SYLL || new RegExp('[' + R_IDEO_OR_SYLL + ']');
+  return REGEX_IDEO_OR_SYLL.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.hasIdeograph" id="apidoc.element.fbjs.UnicodeCJK.hasIdeograph">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasIdeograph
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasIdeograph(str) {
+  REGEX_IDEO = REGEX_IDEO || new RegExp('[' + R_IDEO + ']');
+  return REGEX_IDEO.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.hasKana" id="apidoc.element.fbjs.UnicodeCJK.hasKana">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hasKana
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasKana(str) {
+  REGEX_KANA = REGEX_KANA || new RegExp('[' + R_KANA + ']');
+  return REGEX_KANA.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.hiraganaToKatakana" id="apidoc.element.fbjs.UnicodeCJK.hiraganaToKatakana">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>hiraganaToKatakana
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hiraganaToKatakana(str) {
+  if (!hasKana(str)) {
+    return str;
+  }
+  return str.split('').map(charCodeToKatakana).join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.isKanaWithTrailingLatin" id="apidoc.element.fbjs.UnicodeCJK.isKanaWithTrailingLatin">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>isKanaWithTrailingLatin
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isKanaWithTrailingLatin(str) {
+  REGEX_IS_KANA_WITH_TRAILING_LATIN = REGEX_IS_KANA_WITH_TRAILING_LATIN || new RegExp('^' + '[' + R_KANA + ']+' + '[' + R_LATIN + ']' + '$');
+  return REGEX_IS_KANA_WITH_TRAILING_LATIN.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeCJK.kanaRemoveTrailingLatin" id="apidoc.element.fbjs.UnicodeCJK.kanaRemoveTrailingLatin">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeCJK.</span>kanaRemoveTrailingLatin
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kanaRemoveTrailingLatin(str) {
+  if (isKanaWithTrailingLatin(str)) {
+    return str.substr(0, str.length - 1);
+  }
+  return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeHangulKorean" id="apidoc.module.fbjs.UnicodeHangulKorean">module fbjs.UnicodeHangulKorean</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeHangulKorean.toConjoiningJamo" id="apidoc.element.fbjs.UnicodeHangulKorean.toConjoiningJamo">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeHangulKorean.</span>toConjoiningJamo
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toConjoiningJamo(string) {
+  if (!hasCompatibilityOrSyllable(string)) {
+    return string;
+  }
+
+  var result = [];
+  for (var i = 0; i &lt; string.length; i++) {
+    var charStr = string.charAt(i);
+    var codeUnit = charStr.charCodeAt(0);
+    result.push(CBASE &lt;= codeUnit &amp;&amp; codeUnit &lt; CTOP ? fromCompatibility(codeUnit) : SBASE &lt;= codeUnit &amp;&amp; codeUnit &lt; STOP ? decomposeSyllable
+(codeUnit) : charStr);
+  }
+  return result.join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeUtils" id="apidoc.module.fbjs.UnicodeUtils">module fbjs.UnicodeUtils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.getCodePoints" id="apidoc.element.fbjs.UnicodeUtils.getCodePoints">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>getCodePoints
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCodePoints(str) {
+  var codePoints = [];
+  for (var pos = 0; pos &lt; str.length; pos += getUTF16Length(str, pos)) {
+    codePoints.push(str.codePointAt(pos));
+  }
+  return codePoints;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+ * Get a list of formatted (string) Unicode code-points from a String
+ *
+ * @param {string} str        Valid Unicode string
+ * @return {array&lt;string&gt;}    A list of formatted code-point strings
+ */
+function getCodePointsFormatted(str) {
+var codePoints = UnicodeUtils.<span class="apidocCodeKeywordSpan">getCodePoints</span>(str);
+return codePoints.map(formatCodePoint);
+}
+
+var specialEscape = {
+0x07: '\\a',
+0x08: '\\b',
+0x0C: '\\f',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.getUTF16Length" id="apidoc.element.fbjs.UnicodeUtils.getUTF16Length">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>getUTF16Length
+        <span class="apidocSignatureSpan">(str, pos)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getUTF16Length(str, pos) {
+  return 1 + isCodeUnitInSurrogateRange(str.charCodeAt(pos));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.hasSurrogateUnit" id="apidoc.element.fbjs.UnicodeUtils.hasSurrogateUnit">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>hasSurrogateUnit
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function hasSurrogateUnit(str) {
+  return SURROGATE_UNITS_REGEX.test(str);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.isCodeUnitInSurrogateRange" id="apidoc.element.fbjs.UnicodeUtils.isCodeUnitInSurrogateRange">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>isCodeUnitInSurrogateRange
+        <span class="apidocSignatureSpan">(codeUnit)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isCodeUnitInSurrogateRange(codeUnit) {
+  return SURROGATE_HIGH_START &lt;= codeUnit &amp;&amp; codeUnit &lt;= SURROGATE_LOW_END;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.isSurrogatePair" id="apidoc.element.fbjs.UnicodeUtils.isSurrogatePair">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>isSurrogatePair
+        <span class="apidocSignatureSpan">(str, index)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isSurrogatePair(str, index) {
+  !(0 &lt;= index &amp;&amp; index &lt; str.length) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'isSurrogatePair: Invalid index
+ %s for string length %s.', index, str.length) : invariant(false) : void 0;
+  if (index + 1 === str.length) {
+    return false;
+  }
+  var first = str.charCodeAt(index);
+  var second = str.charCodeAt(index + 1);
+  return SURROGATE_HIGH_START &lt;= first &amp;&amp; first &lt;= SURROGATE_HIGH_END &amp;&amp; SURROGATE_LOW_START &lt;= second &amp;&amp; second &lt;= SURROGATE_LOW_END
+;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.strlen" id="apidoc.element.fbjs.UnicodeUtils.strlen">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>strlen
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function strlen(str) {
+  // Call the native functions if there's no surrogate char
+  if (!hasSurrogateUnit(str)) {
+    return str.length;
+  }
+
+  var len = 0;
+  for (var pos = 0; pos &lt; str.length; pos += getUTF16Length(str, pos)) {
+    len++;
+  }
+  return len;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.substr" id="apidoc.element.fbjs.UnicodeUtils.substr">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>substr
+        <span class="apidocSignatureSpan">(str, start, length)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function substr(str, start, length) {
+  start = start || 0;
+  length = length === undefined ? Infinity : length || 0;
+
+  // Call the native functions if there's no surrogate char
+  if (!hasSurrogateUnit(str)) {
+    return str.substr(start, length);
+  }
+
+  // Obvious cases
+  var size = str.length;
+  if (size &lt;= 0 || start &gt; size || length &lt;= 0) {
+    return '';
+  }
+
+  // Find the actual starting position
+  var posA = 0;
+  if (start &gt; 0) {
+    for (; start &gt; 0 &amp;&amp; posA &lt; size; start--) {
+      posA += getUTF16Length(str, posA);
+    }
+    if (posA &gt;= size) {
+      return '';
+    }
+  } else if (start &lt; 0) {
+    for (posA = size; start &lt; 0 &amp;&amp; 0 &lt; posA; start++) {
+      posA -= getUTF16Length(str, posA - 1);
+    }
+    if (posA &lt; 0) {
+      posA = 0;
+    }
+  }
+
+  // Find the actual ending position
+  var posB = size;
+  if (length &lt; size) {
+    for (posB = posA; length &gt; 0 &amp;&amp; posB &lt; size; length--) {
+      posB += getUTF16Length(str, posB);
+    }
+  }
+
+  return str.substring(posA, posB);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * of Kana characters followed by one Latin character.
+ *
+ * @param {string} str
+ * @output {string}
+ */
+function kanaRemoveTrailingLatin(str) {
+if (isKanaWithTrailingLatin(str)) {
+  return str.<span class="apidocCodeKeywordSpan">substr</span>(0, str.length - 1);
+}
+return str;
+}
+
+var UnicodeCJK = {
+hasKana: hasKana,
+hasIdeograph: hasIdeograph,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtils.substring" id="apidoc.element.fbjs.UnicodeUtils.substring">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtils.</span>substring
+        <span class="apidocSignatureSpan">(str, start, end)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function substring(str, start, end) {
+  start = start || 0;
+  end = end === undefined ? Infinity : end || 0;
+
+  if (start &lt; 0) {
+    start = 0;
+  }
+  if (end &lt; 0) {
+    end = 0;
+  }
+
+  var length = Math.abs(end - start);
+  start = start &lt; end ? start : end;
+  return substr(str, start, length);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ var posB = size;
+ if (length &lt; size) {
+   for (posB = posA; length &gt; 0 &amp;&amp; posB &lt; size; length--) {
+     posB += getUTF16Length(str, posB);
+   }
+ }
+
+ return str.<span class="apidocCodeKeywordSpan">substring</span>(posA, posB);
+}
+
+/**
+* Fully Unicode-enabled replacement for String#substring()
+*
+* @param {string} str    Valid Unicode string
+* @param {number} start  Location in Unicode sequence to begin extracting
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UnicodeUtilsExtra" id="apidoc.module.fbjs.UnicodeUtilsExtra">module fbjs.UnicodeUtilsExtra</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.cEscape" id="apidoc.element.fbjs.UnicodeUtilsExtra.cEscape">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>cEscape
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cEscape(s) {
+  return 'u8"' + c11Escape(s) + '"';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.formatCodePoint" id="apidoc.element.fbjs.UnicodeUtilsExtra.formatCodePoint">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>formatCodePoint
+        <span class="apidocSignatureSpan">(codePoint)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function formatCodePoint(codePoint) {
+  codePoint = codePoint || 0; // NaN --&gt; 0
+  var formatted = '';
+  if (codePoint &lt;= 0xFFFF) {
+    formatted = zeroPaddedHex(codePoint, 4);
+  } else {
+    formatted = codePoint.toString(16).toUpperCase();
+  }
+  return 'U+' + formatted;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.getCodePointsFormatted" id="apidoc.element.fbjs.UnicodeUtilsExtra.getCodePointsFormatted">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>getCodePointsFormatted
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getCodePointsFormatted(str) {
+  var codePoints = UnicodeUtils.getCodePoints(str);
+  return codePoints.map(formatCodePoint);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.jsEscape" id="apidoc.element.fbjs.UnicodeUtilsExtra.jsEscape">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>jsEscape
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function jsEscape(s) {
+  var result = '"';
+  for (var i = 0; i &lt; s.length; i++) {
+    var cp = s.charCodeAt(i);
+    var special = specialEscape[cp];
+    if (special !== undefined) {
+      result += special;
+    } else if (cp &gt;= 0x20 &amp;&amp; cp &lt;= 0x7e) {
+      result += String.fromCodePoint(cp);
+    } else {
+      result += '\\u' + zeroPaddedHex(cp, 4);
+    }
+  }
+  result += '"';
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.objcEscape" id="apidoc.element.fbjs.UnicodeUtilsExtra.objcEscape">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>objcEscape
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function objcEscape(s) {
+  return '@"' + c11Escape(s) + '"';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.phpEscape" id="apidoc.element.fbjs.UnicodeUtilsExtra.phpEscape">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>phpEscape
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function phpEscape(s) {
+  var result = '"';
+  var _iteratorNormalCompletion = true;
+  var _didIteratorError = false;
+  var _iteratorError = undefined;
+
+  try {
+    for (var _iterator = UnicodeUtils.getCodePoints(s)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator
+.next()).done); _iteratorNormalCompletion = true) {
+      var cp = _step.value;
+
+      var special = specialEscape[cp];
+      if (special !== undefined) {
+        result += special;
+      } else if (cp &gt;= 0x20 &amp;&amp; cp &lt;= 0x7e) {
+        result += String.fromCodePoint(cp);
+      } else if (cp &lt;= 0xFFFF) {
+        result += '\\u{' + zeroPaddedHex(cp, 4) + '}';
+      } else {
+        result += '\\u{' + zeroPaddedHex(cp, 6) + '}';
+      }
+    }
+  } catch (err) {
+    _didIteratorError = true;
+    _iteratorError = err;
+  } finally {
+    try {
+      if (!_iteratorNormalCompletion &amp;&amp; _iterator['return']) {
+        _iterator['return']();
+      }
+    } finally {
+      if (_didIteratorError) {
+        throw _iteratorError;
+      }
+    }
+  }
+
+  result += '"';
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.pyEscape" id="apidoc.element.fbjs.UnicodeUtilsExtra.pyEscape">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>pyEscape
+        <span class="apidocSignatureSpan">(s)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pyEscape(s) {
+  return 'u"' + c11Escape(s) + '"';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UnicodeUtilsExtra.zeroPaddedHex" id="apidoc.element.fbjs.UnicodeUtilsExtra.zeroPaddedHex">
+        function <span class="apidocSignatureSpan">fbjs.UnicodeUtilsExtra.</span>zeroPaddedHex
+        <span class="apidocSignatureSpan">(codePoint, len)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function zeroPaddedHex(codePoint, len) {
+  var codePointHex = codePoint.toString(16).toUpperCase();
+  var numZeros = Math.max(0, len - codePointHex.length);
+  var result = '';
+  for (var i = 0; i &lt; numZeros; i++) {
+    result += '0';
+  }
+  result += codePointHex;
+  return result;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.UserAgent" id="apidoc.module.fbjs.UserAgent">module fbjs.UserAgent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isBrowser" id="apidoc.element.fbjs.UserAgent.isBrowser">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isBrowser
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBrowser = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isBrowserArchitecture" id="apidoc.element.fbjs.UserAgent.isBrowserArchitecture">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isBrowserArchitecture
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isBrowserArchitecture = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isDevice" id="apidoc.element.fbjs.UserAgent.isDevice">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isDevice
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isDevice = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isEngine" id="apidoc.element.fbjs.UserAgent.isEngine">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isEngine
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEngine = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isPlatform" id="apidoc.element.fbjs.UserAgent.isPlatform">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isPlatform
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPlatform = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.UserAgent.isPlatformArchitecture" id="apidoc.element.fbjs.UserAgent.isPlatformArchitecture">
+        function <span class="apidocSignatureSpan">fbjs.UserAgent.</span>isPlatformArchitecture
+        <span class="apidocSignatureSpan">(string)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isPlatformArchitecture = function (string) {
+  if (!cache.hasOwnProperty(string)) {
+    cache[string] = callback.call(this, string);
+  }
+  return cache[string];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.VersionRange" id="apidoc.module.fbjs.VersionRange">module fbjs.VersionRange</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.VersionRange.contains" id="apidoc.element.fbjs.VersionRange.contains">
+        function <span class="apidocSignatureSpan">fbjs.VersionRange.</span>contains
+        <span class="apidocSignatureSpan">(range, version)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function contains(range, version) {
+  return checkOrExpression(range.trim(), version.trim());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } else if (outerNode === innerNode) {
+    return true;
+  } else if (isTextNode(outerNode)) {
+    return false;
+  } else if (isTextNode(innerNode)) {
+    return containsNode(outerNode, innerNode.parentNode);
+  } else if ('contains' in outerNode) {
+    return outerNode.<span class="apidocCodeKeywordSpan">contains</span>(innerNode);
+  } else if (outerNode.compareDocumentPosition) {
+    return !!(outerNode.compareDocumentPosition(innerNode) &amp; 16);
+  } else {
+    return false;
+  }
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.emptyFunction" id="apidoc.module.fbjs.emptyFunction">module fbjs.emptyFunction</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.emptyFunction" id="apidoc.element.fbjs.emptyFunction.emptyFunction">
+        function <span class="apidocSignatureSpan">fbjs.</span>emptyFunction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function emptyFunction() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturns" id="apidoc.element.fbjs.emptyFunction.thatReturns">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturns
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function makeEmptyFunction(arg) {
+  return function () {
+    return arg;
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturnsArgument" id="apidoc.element.fbjs.emptyFunction.thatReturnsArgument">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsArgument
+        <span class="apidocSignatureSpan">(arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">thatReturnsArgument = function (arg) {
+  return arg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturnsFalse" id="apidoc.element.fbjs.emptyFunction.thatReturnsFalse">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsFalse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">thatReturnsFalse = function () {
+  return arg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturnsNull" id="apidoc.element.fbjs.emptyFunction.thatReturnsNull">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsNull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">thatReturnsNull = function () {
+  return arg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturnsThis" id="apidoc.element.fbjs.emptyFunction.thatReturnsThis">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsThis
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">thatReturnsThis = function () {
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.emptyFunction.thatReturnsTrue" id="apidoc.element.fbjs.emptyFunction.thatReturnsTrue">
+        function <span class="apidocSignatureSpan">fbjs.emptyFunction.</span>thatReturnsTrue
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">thatReturnsTrue = function () {
+  return arg;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.enumerate" id="apidoc.module.fbjs.enumerate">module fbjs.enumerate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate.enumerate" id="apidoc.element.fbjs.enumerate.enumerate">
+        function <span class="apidocSignatureSpan">fbjs.</span>enumerate
+        <span class="apidocSignatureSpan">(object, kind)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function enumerate(object, kind) {
+
+  // First check specific iterators.
+  if (typeof object === 'string') {
+    return StringIterators[kind || KIND_VALUES](object);
+  } else if (Array.isArray(object)) {
+    return ArrayIterators[kind || KIND_VALUES](object);
+
+    // Then see if an object implements own.
+  } else if (object[Symbol.iterator]) {
+    return object[Symbol.iterator]();
+
+    // And fallback to generic with entries.
+  } else {
+    return GenericIterators[kind || KIND_ENTRIES](object);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate.entries" id="apidoc.element.fbjs.enumerate.entries">
+        function <span class="apidocSignatureSpan">fbjs.enumerate.</span>entries
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function entries(object) {
+  return enumerate(object, KIND_ENTRIES);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    values: hasNative ? function (array) {
+      return array.values();
+    } : function (array) {
+      return new ArrayIterator(array, KIND_VALUES);
+    },
+
+    entries: hasNative ? function (array) {
+      return array.<span class="apidocCodeKeywordSpan">entries</span>();
+    } : function (array) {
+      return new ArrayIterator(array, KIND_ENTRIES);
+    }
+  };
+}();
+
+// -----------------------------------------------------------------
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate.generic" id="apidoc.element.fbjs.enumerate.generic">
+        function <span class="apidocSignatureSpan">fbjs.enumerate.</span>generic
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function entries(object) {
+  return new ObjectIterator(object, KIND_ENTRIES);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate.keys" id="apidoc.element.fbjs.enumerate.keys">
+        function <span class="apidocSignatureSpan">fbjs.enumerate.</span>keys
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function keys(object) {
+  return enumerate(object, KIND_KEYS);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  } else {
+if (a.constructor !== b.constructor) {
+  return false;
+}
+if (a.hasOwnProperty('valueOf') &amp;&amp; b.hasOwnProperty('valueOf')) {
+  return a.valueOf() == b.valueOf();
+}
+var keys = Object.<span class="apidocCodeKeywordSpan">keys</span>(a);
+if (keys.length != Object.keys(b).length) {
+  return false;
+}
+for (var i = 0; i &lt; keys.length; i++) {
+  if (!eq(a[keys[i]], b[keys[i]], aStack, bStack)) {
+    return false;
+  }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.enumerate.values" id="apidoc.element.fbjs.enumerate.values">
+        function <span class="apidocSignatureSpan">fbjs.enumerate.</span>values
+        <span class="apidocSignatureSpan">(object)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function values(object) {
+  return enumerate(object, KIND_VALUES);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Set = require('./Set');
+
+/**
+ * Returns the distinct elements of an iterable. The result is an array whose
+ * elements are ordered by first occurrence.
+ */
+function distinctArray(xs) {
+  return Array.from(new Set(xs).<span class="apidocCodeKeywordSpan">values</span>());
+}
+
+module.exports = distinctArray;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fbjs.getViewportDimensions" id="apidoc.module.fbjs.getViewportDimensions">module fbjs.getViewportDimensions</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.getViewportDimensions.getViewportDimensions" id="apidoc.element.fbjs.getViewportDimensions.getViewportDimensions">
+        function <span class="apidocSignatureSpan">fbjs.</span>getViewportDimensions
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getViewportDimensions() {
+  return {
+    width: window.innerWidth || getViewportWidth(),
+    height: window.innerHeight || getViewportHeight()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fbjs.getViewportDimensions.withoutScrollbars" id="apidoc.element.fbjs.getViewportDimensions.withoutScrollbars">
+        function <span class="apidocSignatureSpan">fbjs.getViewportDimensions.</span>withoutScrollbars
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">withoutScrollbars = function () {
+  return {
+    width: getViewportWidth(),
+    height: getViewportHeight()
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
